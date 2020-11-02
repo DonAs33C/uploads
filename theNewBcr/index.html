@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bollettino di Criticità</title>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+		  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+		  crossorigin=""/>
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+		  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+		  crossorigin=""></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    	<script src="leaflet-polygon.fillPattern.js"></script>
+  		<style type="text/css">
+  		
+	  		html, body, #theMap {
+	            margin: 0;
+	            padding: 0;
+	            width: 100%;
+	            height: 100%;
+	        }
+	        
+	        .popupcontainer{
+	        	display: block;
+	        	width: 400px;
+	        }
+	        .popuprow {
+	        	margin : 0 2px;
+	        }
+	        .popuprow.hidden {
+	        	display: none;
+			}
+	        .popupcell{
+	        	display: inline-block;
+				border: 1px solid gray;
+				padding: 3px;
+				margin : 1px;
+	        }
+	        
+	        .popupcell:first-of-type {
+				width: 100px;
+			}
+	        .popupcell:last-of-type {
+				width: 225px;
+			}
+			.popupcell.list {
+				height: 80px;
+				overflow: auto;
+				margin-left: 111PX;			}
+			.popupcell.list span{
+				display : block;
+			}
+  			
+  		</style>
+  	</head>
+	<body>
+		<div id="theMap"></div>
+		<script type="text/javascript">
+		
+		var zone2comuni;
+		var geoJson;
+		
+		function onEachFeature(f, l){
+			l.on({
+				mouseover: highlightFeature,
+				mouseout: resetHighlight
+			});
+			bcrPopup(f, l);
+		}
+		
+		function bcrPopup(f, l){
+			// Rappresentata_nella_mappa1 -> "Rappresentata nella mappa"
+			// Per_rischio_Idraulico2 -> "Per rischio idraulico"
+			// Per_rischio_temporali3 -> "Per rischio temporali"
+			// Per_rischio_Idrogeologico4 -> "Per rischio idrogeologico"
+			// Zona_di_allerta5 -> "Nome zona"
+			// comuni -> "Comuni : "Dettaglio"
+ 			
+			var content = "<h3>Criticità / ALLERTA</h3>";
+			
+			if (f.properties.Rappresentata_nella_mappa1){
+				content += '<div class="popuprow">';
+				content += '<div class="popupcell">Rappresentata nella mappa</div>';
+				content += '<div class="popupcell">' + f.properties.Rappresentata_nella_mappa1 + '</div>';
+				content += '</div>';
+			}
+			if (f.properties.Per_rischio_Idraulico2){
+				content += '<div class="popuprow">';
+				content += '<div class="popupcell">Per rischio idraulico</div>';
+				content += '<div class="popupcell">' + f.properties.Per_rischio_Idraulico2 + '</div>';
+				content += '</div>';
+			}
+			if (f.properties.Per_rischio_temporali3){
+				content += '<div class="popuprow">';
+				content += '<div class="popupcell">Per rischio temporali</div>';
+				content += '<div class="popupcell">' + f.properties.Per_rischio_temporali3 + '</div>';
+				content += '</div>';
+			}
+			if (f.properties.Per_rischio_Idrogeologico4){
+				content += '<div class="popuprow">';
+				content += '<div class="popupcell">Per rischio idorgeologico</div>';
+				content += '<div class="popupcell">' + f.properties.Per_rischio_Idrogeologico4 + '</div>';
+				content += '</div>';
+			}
+			if (f.properties.Zona_di_allerta5){
+				content += '<div class="popuprow">';
+				content += '<div class="popupcell">Nome zona</div>';
+				content += '<div class="popupcell">' + f.properties.Zona_di_allerta5 + '</div>';
+				content += '</div>';
+			}
+			content += '<div class="popuprow">';
+			content += '<div class="popupcell">comuni</div>';
+			content += '<div class="popupcell"><a href="#" onclick="getComuni(\'' + f.properties.Zona_di_allerta5 + '\')">Dettaglio</a></div>';
+			content += '</div>';
+
+			content += '<div class="popuprow hidden" id="' + f.properties.Zona_di_allerta5 + '"></div>';
+
+			content += '</div>';
+			
+			var popupOpt = {
+				className : "popupcontainer",
+				maxWidth : 360,
+				minWidth : 360
+			};
+			l.bindPopup(content, popupOpt);
+		}
+		
+		function getComuni(zona){
+			if ($('#'+zona).is(":empty")){
+				var comuni = zone2comuni[zona];
+				console.log(comuni);
+				var cont = $('<div />').addClass('popupcell list');
+				$.each(comuni, function(i, com){
+					cont.append($('<span />').html(com));
+				});			
+				$('#'+zona).append(cont);
+			}
+			$('#'+zona).toggle();
+		}
+		
+		function theBCRstyle(feature) {
+			function getColor(d) {
+			    return d == "Assenza di fenomeni significativi prevedibili / NESSUNA ALLERTA"  	? '#90c985' :
+			           d == "Ordinaria per rischio idrogeologico / ALLERTA GIALLA"  			? '#f8f865' :
+			           d == "Ordinaria per rischio temporali / ALLERTA GIALLA"  				? '#f8f865' :
+			           d == "Ordinaria per rischio idraulico / ALLERTA GIALLA"   				? '#f8f865' :
+			           d == "Moderata per rischio idrogeologico / ALLERTA ARANCIONE"   			? '#f0bf01' :
+			           d == "Moderata per rischio temporali / ALLERTA ARANCIONE"  				? '#f0bf01' :
+			           d == "Moderata per rischio idraulico / ALLERTA ARANCIONE"  				? '#f0bf01' :
+		        	   d == "Elevata per rischio idrogeologico / ALLERTA ROSSA</"  				? '#fd6767' :
+			           d == "Elevata per rischio idraulico / ALLERTA ARANCIONE"  				? '#fd6767' :
+  	                       																		  '#dcdcdc' ;
+			}
+		    
+			function getPattern(d){
+			    return d == "Ordinaria per rischio idrogeologico / ALLERTA GIALLA"    ?	"url(stripe.png)" : 
+		           	   d == "Ordinaria per rischio temporali / ALLERTA GIALLA"  	  ? "url(dot.png)"    :
+			           d == "Moderata per rischio idrogeologico / ALLERTA ARANCIONE"  ?	"url(stripe.png)" : 
+		               d == "Moderata per rischio temporali / ALLERTA ARANCIONE"      ?	"url(dot.png)"    :
+	        	       d == "Elevata per rischio idrogeologico / ALLERTA ROSSA</"     ?	"url(stripe.png)" : 
+		    																			null ;
+			}
+			
+			var thePattern = null;
+			var theStyle = {
+			        fillColor: getColor(feature.properties.Rappresentata_nella_mappa1),
+			        weight: 2,
+			        opacity: .7,
+			        color: 'black',
+		            fillOpacity: .7
+			    };
+			if (thePattern = getPattern(feature.properties.Rappresentata_nella_mappa1)){
+				theStyle["fill"] = thePattern;
+			}
+					
+			return theStyle;
+		}
+		
+		function highlightFeature(e) {
+			var layer = e.target;
+
+			layer.setStyle({
+				weight: 5,
+				color: '#aa0000',
+				fillOpacity : 1
+			});
+
+			if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+				layer.bringToFront();
+			}
+		}
+		function resetHighlight(e) {
+			var layer = e.target;
+
+			layer.setStyle({
+				weight: 2,
+				color: 'black',
+				fillOpacity : .7
+			});
+		}
+        
+		$(function(){
+		
+			var theMap = L.map('theMap').setView([41.8965, 12.46911], 6);
+			L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+			    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+			    maxZoom: 18,
+			    id: 'pgiannini/cjnxbz27f5cls2sof30de0jhj',
+			    tileSize: 512,
+			    zoomOffset: -1,
+			    accessToken: 'pk.eyJ1IjoicGdpYW5uaW5pIiwiYSI6ImNrY2dlbWRmZzByYjMyeG0ydW9nemQzajAifQ.bJmtTjoEmbCWa2JjV0GxcA'
+			}).addTo(theMap);
+	
+			$.getJSON("jsondata/features.json", function(data){
+				geoJson = L.geoJson(data,{
+					style : theBCRstyle,
+					onEachFeature : onEachFeature 
+				}).addTo(theMap);
+			}).then(function(){
+				$.getJSON("jsondata/zone2comuni.json", function(data){
+					zone2comuni = data;
+				});
+			});
+
+		});
+		
+		</script>	
+	</body>
+</html>
