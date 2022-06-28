@@ -6,22 +6,23 @@
 				"property": "icon",
 				"values": [{
 						"key": "Sotto Controllo",
-						"value": "url(https://raw.githubusercontent.com/pcm-dpc/DPC-Bollettini-Vigilanza-Meteorologica/master/files/iconFenomeni/1.png)"
+						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/SottoControllo.png)"
 					},
 					{
 						"key": "In bonifica",
-						"value": "url(https://raw.githubusercontent.com/pcm-dpc/DPC-Bollettini-Vigilanza-Meteorologica/master/files/iconFenomeni/2.png)"
+						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/InBonifica.png)"
 					},
 					{
 						"key": "Attivo",
-						"value": "url(https://raw.githubusercontent.com/pcm-dpc/DPC-Bollettini-Vigilanza-Meteorologica/master/files/iconFenomeni/3.png)"
+						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/Attivo.png)"
 					},
 					{
 						"key": "Spento",
-						"value": "url(https://raw.githubusercontent.com/pcm-dpc/DPC-Bollettini-Vigilanza-Meteorologica/master/files/iconFenomeni/4.png)"
+						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/Spento.png)"
 					}
 				]
 			}
 		]
 	}]
 }
+ 
