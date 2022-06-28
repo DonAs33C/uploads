@@ -3,7 +3,7 @@
 		"propertyKey": "id_fenomeno",
 		"properties": [
 			{
-				"property": "stato_id",
+				"property": "Stato",
 				"values": [{
 						"key": 1,
 						"value": "url(https://raw.githubusercontent.com/pcm-dpc/DPC-Bollettini-Vigilanza-Meteorologica/master/files/iconFenomeni/1.png)"
