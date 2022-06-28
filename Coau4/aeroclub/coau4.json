@@ -6,16 +6,13 @@
   "today": {
     "attachment": [
       {
-        "geojson": "https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/aib.json",
-		"topojson" : "https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/aib_topo.json"
-      }
+        "geojson": "https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/aib.json"
+      },
+	  {"topojson" : "https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/aib_topo.json"}
     ],
     "topo_json": [
       "https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/aib_topo.json"
     ],
-    "html_description": ""
-  },
-  "style": [
-    ""
-  ]
+    "html_description": "Coau4"
+  }
 }
