@@ -1,0 +1,20 @@
+{
+  "date": "20210526",
+  "global_legend": "",
+  "name": "Coau4",
+  "strategy": "features",
+  "today": {
+    "attachment": [
+      {
+        "geojson": "https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/aib.json"
+      }
+    ],
+    "topo_json": [
+      "https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/aib.json"
+    ],
+    "html_description": ""
+  },
+  "style": [
+    ""
+  ]
+}
