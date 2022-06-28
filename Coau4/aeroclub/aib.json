@@ -356,7 +356,7 @@
 			"Ora_accertamento": "22/06/2021 18:42",
 			"Lat_geo": "36°58'12\" N",
 			"Lon_geo": "14°45'43\" E",
-			"Stato": "In bonifica",
+			"Stato": "In bonifica"
 		}
 	}, {
 		"type": "Feature",
