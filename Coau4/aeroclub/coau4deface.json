@@ -1,7 +1,7 @@
 {
 	"date": "20220628",
 	"global_legend": "https://raw.githubusercontent.com/pcm-dpc/DPC-Bollettini-Vigilanza-Meteorologica/master/files/legenda_bv_verticale.jpg",
-	"name": "Coau4",
+	"name": "Siracusa in fiamme",
 	"style": [
 		"https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/style.json"
 	],  
@@ -14,6 +14,6 @@
 		"topo_json": [
 			"https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/aib_topo.json"
 		],
-		"html_descrition": "<h1>Terribile raffica di incendi in Sicilia</h1><br /><p>La popolazione è disperata</p><p>La Protezione Civile invita ad evacuare i centri abitati e a spostarsi sopravvento</p>"
+		"html_descrition": "<h1>Terribile raffica di incendi in Sicilia!</h1><br /><p>La popolazione è disperata</p><p>La Protezione Civile invita ad evacuare i centri abitati e a spostarsi sopravvento</p>"
 	}
 }
