@@ -6,19 +6,19 @@
 				"property": "icon",
 				"values": [{
 						"key": "Sotto Controllo",
-						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/SottoControllo.png)"
+						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/SottoControllo_16.png)"
 					},
 					{
 						"key": "In bonifica",
-						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/InBonifica.png)"
+						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/InBonifica_16.png)"
 					},
 					{
 						"key": "Attivo",
-						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/Attivo.png)"
+						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/Attivo_16.png)"
 					},
 					{
 						"key": "Spento",
-						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/Spento.png)"
+						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/Spento_16.png)"
 					}
 				]
 			}
