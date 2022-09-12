@@ -1,0 +1,16 @@
+{
+  "date": "2022-09-12T18:00:00.000Z",
+  "name": "Statistiche BCR 2020",
+  "global_legend": "",
+  "style": "https://raw.githubusercontent.com/petrus-giannini/uploads/theNewBcr/stat/style.json",
+  "today": {
+    "topo_json": "https://raw.githubusercontent.com/petrus-giannini/uploads/theNewBcr/stat/bcr_allerte_2020_regioni.json",
+    "html_descrition": "<p>Statistiche numerosità Allerte del Bollettino di Criticit&agrave; Idrogeologica anno 2020</p>",
+    "attachment": [
+      {
+        "GeoJSON": "https://raw.githubusercontent.com/petrus-giannini/uploads/theNewBcr/stat/bcr_allerte_2020_regioni.json",
+        "TopoJSON": "https://raw.githubusercontent.com/petrus-giannini/uploads/theNewBcr/stat/bcr_allerte_2020_regioni.topo.json"
+      }
+    ]
+  }
+}
