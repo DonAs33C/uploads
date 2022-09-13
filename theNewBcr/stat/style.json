@@ -44,19 +44,27 @@
           "values": [
             {
               "key": "0",
-              "value": "#90c985"
+              "value": "#7cdf1f"
             },
             {
               "key": "1",
-              "value": "#f8f865"
+              "value": "#a8e216"
             },
             {
               "key": "2",
-              "value": "#f0bf01"
+              "value": "#d4e60c"
             },
             {
               "key": "3",
-              "value": "#fd6767"
+              "value": "#e49d08"
+            },
+            {
+              "key": "4",
+              "value": "#f14f04"
+            },
+            {
+              "key": "5",
+              "value": "#ff0000"
             }
           ]
         }
