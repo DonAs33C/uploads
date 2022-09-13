@@ -1,7 +1,7 @@
 {
   "date": "2022-09-12T18:00:00.000Z",
   "name": "Statistiche BCR 2020",
-  "global_legend": "",
+  "global_legend": "https://raw.githubusercontent.com/petrus-giannini/uploads/main/theNewBcr/stat/legenda-num-allerte-bcr.jpg",
   "style": "https://raw.githubusercontent.com/petrus-giannini/uploads/main/theNewBcr/stat/style.json",
   "today": {
     "topo_json": "https://raw.githubusercontent.com/petrus-giannini/uploads/main/theNewBcr/stat/bcr_allerte_2020_regioni.topo.json",
