@@ -3,7 +3,7 @@
   "name": "Statistiche BCR 2020",
   "style": "https://raw.githubusercontent.com/petrus-giannini/uploads/main/theNewBcr/stat/style.json",
   "today": {
-    "topo_json": "https://raw.githubusercontent.com/petrus-giannini/uploads/main/theNewBcr/stat/bcr_allerte_2020_regioni.json",
+    "topo_json": "https://raw.githubusercontent.com/petrus-giannini/uploads/main/theNewBcr/stat/bcr_allerte_2020_regioni.topo.json",
     "html_descrition": "<p>Statistiche numerosità Allerte del Bollettino di Criticit&agrave; Idrogeologica anno 2020</p>",
     "attachment": [
       {
