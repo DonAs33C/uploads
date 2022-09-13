@@ -1,7 +1,7 @@
 {
   "style_properties": [
     {
-      "propertyKey": "Rappresentata nella mappa",
+      "propertyKey": "numero_allerte",
       "properties": [
         {
           "property": "color",
@@ -43,65 +43,20 @@
           "property": "fillColor",
           "values": [
             {
-              "key": "Assenza di fenomeni significativi prevedibili / NESSUNA ALLERTA",
+              "key": "0",
               "value": "#90c985"
             },
             {
-              "key": "Ordinaria per rischio temporali / ALLERTA GIALLA",
+              "key": "1",
               "value": "#f8f865"
             },
             {
-              "key": "Ordinaria per rischio idrogeologico / ALLERTA GIALLA",
-              "value": "#f8f865"
-            },
-            {
-              "key": "Ordinaria per rischio idraulico / ALLERTA GIALLA",
-              "value": "#f8f865"
-            },
-            {
-              "key": "Moderata per rischio idrogeologico / ALLERTA ARANCIONE",
+              "key": "2",
               "value": "#f0bf01"
             },
             {
-              "key": "Moderata per rischio temporali / ALLERTA ARANCIONE",
-              "value": "#f0bf01"
-            },
-            {
-              "key": "Moderata per rischio idraulico / ALLERTA ARANCIONE",
-              "value": "#f0bf01"
-            },
-            {
-              "key": "Elevata per rischio idrogeologico / ALLERTA ROSSA",
+              "key": "3",
               "value": "#fd6767"
-            },
-            {
-              "key": "Elevata per rischio idraulico / ALLERTA ARANCIONE",
-              "value": "#fd6767"
-            }
-          ]
-        },
-        {
-          "property": "fill",
-          "values": [
-            {
-              "key": "Ordinaria per rischio idrogeologico / ALLERTA GIALLA",
-              "value": "url(./assets/images/stripe.png)"
-            },
-            {
-              "key": "Moderata per rischio idrogeologico / ALLERTA ARANCIONE",
-              "value": "url(./assets/images/stripe.png)"
-            },
-            {
-              "key": "Elevata per rischio idrogeologico / ALLERTA ROSSA",
-              "value": "url(./assets/images/stripe.png)"
-            },
-            {
-              "key": "Ordinaria per rischio temporali / ALLERTA GIALLA",
-              "value": "url(./assets/images/dot.png)"
-            },
-            {
-              "key": "Moderata per rischio temporali / ALLERTA ARANCIONE",
-              "value": "url(./assets/images/dot.png)"
             }
           ]
         }
