@@ -19,6 +19,34 @@
 					{
 						"key": "Spento",
 						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/Spento_16.png)"
+					},
+					{
+						"key": "In validazione",
+						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/InValidazione_16.png)"
+					},
+					{
+						"key": "In attesa assegnazione mezzi AIB",
+						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/InAttesaAssegnazioneMezziAIB_16.png)"
+					},
+					{
+						"key": "Con mezzi AIB assegnati",
+						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/ConMezziAIBAssegnati_16.png)"
+					},
+					{
+						"key": "Annullata",
+						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/Annullata_16.png)"
+					},
+					{
+						"key": "In richiesta di annullamento",
+						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/InRichiestaDiAnnullamento_16.png)"
+					},
+					{
+						"key": "In richiesta di chiusura",
+						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/InRichiestaDiChiusura_16.png)"
+					},
+					{
+						"key": "Inevasa",
+						"value": "url(https://raw.githubusercontent.com/petrus-giannini/uploads/main/Coau4/aeroclub/icons/Inevasa_16.png)"
 					}
 				]
 			}
