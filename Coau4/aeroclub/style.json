@@ -1,6 +1,6 @@
 {
 	"style_properties": [{
-		"propertyKey": "Stato",
+		"propertyKey": "statoRichiestaDescrizione",
 		"properties": [
 			{
 				"property": "icon",
