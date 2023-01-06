@@ -1,1 +1,1 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[11.711426,42.988316]},"properties":{"dataRichiesta":"2022-12-30","numeroRichiesta":"1","lat":42.988316,"lon":11.711426,"statoRichiestaCodice":"ASGND","esitoRichiestaId":"","statoRichiestaDescrizione":"Con mezzi AIB assegnati","regione":"Toscana","provincia":"Siena","comune":"Castiglione d'Orcia"}}]}
+{"type":"FeatureCollection","features":[]}
