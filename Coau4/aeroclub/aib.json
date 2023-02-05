@@ -1,1 +1,1 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[12.431871,42.194088]},"properties":{"dataRichiesta":"2023-01-26","numeroRichiesta":"1","lat":42.194088,"lon":12.431871,"statoRichiestaCodice":"NULL","esitoRichiestaId":"","statoRichiestaDescrizione":"Annullata","regione":"Lazio","provincia":"Viterbo","comune":"Calcata","assegnazioneMezzoAib":[]}}]}
+{"type":"FeatureCollection","features":[]}
