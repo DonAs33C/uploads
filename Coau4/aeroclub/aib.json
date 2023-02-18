@@ -1,1 +1,1 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[11.195068,43.383537]},"properties":{"dataRichiesta":"2023-02-08","numeroRichiesta":"1","lat":43.383537,"lon":11.195068,"statoRichiestaCodice":"IDLE","esitoRichiestaId":"","statoRichiestaDescrizione":"In attesa assegnazione mezzi AIB","regione":"Toscana","provincia":"Siena","comune":"Monteriggioni","assegnazioneMezzoAib":[]}}]}
+{"type":"FeatureCollection","features":[]}
