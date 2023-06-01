@@ -1,1 +1,1 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[13.269261,41.57261]},"properties":{"dataRichiesta":"2023-05-29","numeroRichiesta":"1","lat":41.57261,"lon":13.269261,"statoRichiestaCodice":"IDLE","esitoRichiestaId":"","statoRichiestaDescrizione":"In attesa assegnazione mezzi AIB","regione":"Lazio","provincia":"Frosinone","comune":"Patrica","assegnazioneMezzoAib":[]}}]}
+{"type":"FeatureCollection","features":[]}
